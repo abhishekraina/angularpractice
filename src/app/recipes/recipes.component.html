@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-5">
+      <app-recipes-list (recipeList)="RecipeEL= $event"></app-recipes-list>
+    </div>
+
+    <div class="col-xs-7">
+      <app-recipe-detail *ngIf="RecipeEL;else infoText" [recipeItem]="RecipeEL"></app-recipe-detail>
+      <ng-template #infoText>Please select a recipe</ng-template>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="container">
+  <app-header (visible)= 'pageToggle($event)' child="{{parent}}"></app-header>
+ <div class="row">
+   <div class="col-md-12">
+     <app-recipes *ngIf="toggle==='recipe'"></app-recipes>
+     <app-shopping-list *ngIf="toggle==='shopping'"></app-shopping-list>
+   </div>
+ </div>
+</div>
