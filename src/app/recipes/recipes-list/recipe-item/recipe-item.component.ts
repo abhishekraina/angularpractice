@@ -1,7 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Recipe } from '../../recipes.model';
 import { Input } from '@angular/core';
-import { ApiService } from '../../../api.service';
+//import { ApiService } from '../../../api.service';
 
 @Component({
   selector: 'app-recipe-item',
@@ -13,13 +13,13 @@ export class RecipeItemComponent implements OnInit {
 RecipeArr=[];
 
 @Output() recipeSelected=new EventEmitter<void>();
-  constructor(private apiService: ApiService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.apiService.getRecipe().subscribe((res)=>{
-      this.RecipeArr=Object.keys(res);
-      console.log(this.RecipeArr);
-});
+//     this.apiService.getRecipe().subscribe((res)=>{
+//       this.RecipeArr=Object.keys(res);
+//       console.log(this.RecipeArr);
+// });
 
 // fetch('https://jsonplaceholder.typicode.com/todos/1')
 //   .then(response => response.json())
